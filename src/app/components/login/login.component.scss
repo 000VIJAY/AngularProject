@@ -1,0 +1,92 @@
+.OuterDiv{
+    width: 97vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.InnerDiv{
+    border: 2px solid gray;
+    width: 30%;
+    height: 70%;
+    margin: 20px;
+    padding: 45px;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.SecondInnerDiv{
+    display:block;
+}
+.funDo{
+    font-size: 32px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+    color: goldenrod;
+}
+.span{
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.email{
+    width: 100%;
+    padding-bottom: 0px;
+}
+.Forgot{
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+}
+.matButton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    padding-left: 0px;
+}
+.Instead{
+    font-size: 16px;
+    font-style: normal;
+    margin-bottom: 16px;
+    padding-top: 5px;
+    border-radius: 4px;
+    color: #1a73e8;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: .25px;
+    outline: 0;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-align: left;
+    border: 0;
+}
+
+.next{
+    margin-left: 200px;
+}
+.mat-raised-button{
+    background-color:#1a73e8;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+}
