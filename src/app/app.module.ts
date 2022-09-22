@@ -10,12 +10,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import {MatButtonModule} from '@angular/material/button';
+import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotComponent
+    ForgotComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,

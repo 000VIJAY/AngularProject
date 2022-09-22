@@ -1,7 +1,12 @@
 <div class="OuterDiv">
     <div class="FirstInnerDiv">
         <div class="funDo">
-            <p><b>FunDoo</b></p>
+            <b class="F">F</b>
+            <b class="u">u</b>
+            <b class="n">n</b>
+            <b class="D">D</b>
+            <b class="o">o</b>
+            <b class="oo">o</b>
         </div>
         <div class="InnerDiv">
             <div class="myDiv">
@@ -22,24 +27,29 @@
                     <mat-label>User Name</mat-label>
                     <input matInput placeholder="">
                 </mat-form-field>
-                <p>You can use letters and numbers </p>
+                <div class="para">
+                    <p>You can use letters , numbers & periods </p>
+                </div>
                 <br>
                 <div class="nameDiv">
                     <mat-form-field appearance="outline" class="PasswordDiv">
                         <mat-label>Password</mat-label>
                         <input matInput placeholder="">
                     </mat-form-field>
-                    <mat-form-field appearance="outline">
+                    <mat-form-field appearance="outline" class="Confirm">
                         <mat-label>Confirm</mat-label>
                         <input matInput placeholder="">
                     </mat-form-field>
                 </div>
+                <div class="para">
                 <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
-                <input type="radio">
-                <label>Show Password</label>
+                </div>
+                <label style="cursor:pointer;">
+                <input type="checkbox">
+                Show Password</label>
                 <div class="matButton">
                     <div class="loginButton">
-                        <button class="login">Login instead</button>
+                        <button class="login"><b>Sign in instead</b></button>
                     </div>
                     <div class="NextButton">
                         <button class="mat-raised-button">Next</button>
@@ -47,7 +57,12 @@
                 </div>
             </div>
             <div class="imageDiv">
-                <img class="image" src="../../../assets/account.svg" alt="">
+                <div>
+                    <img class="image" src="../../../assets/account.svg" alt="">
+                </div>
+                <div class="">
+                    <p>One account. All of FunDoo working for you.</p>
+                </div>
             </div>
         </div>
     </div>
