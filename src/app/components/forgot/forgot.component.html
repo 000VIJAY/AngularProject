@@ -1,12 +1,12 @@
 <div class="OuterDiv">
     <div class="InnerDiv">
         <div class="funDo">
-                <b class="F">F</b>
-                <b class="u">u</b>
-                <b class="n">n</b>
-                <b class="D">D</b>
-                <b class="o">o</b>
-                <b class="oo">o</b>
+            <b class="F">F</b>
+            <b class="u">u</b>
+            <b class="n">n</b>
+            <b class="D">D</b>
+            <b class="o">o</b>
+            <b class="oo">o</b>
         </div>
         <div>
             <p class="span">Find your email</p>
@@ -14,12 +14,15 @@
         <div class="rec">
             <p> Enter your recovery email </p>
         </div>
-        <div  class="email">
-            <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input matInput placeholder="">
-            </mat-form-field>
-        </div>
-        <button class="mat-raised-button">Next</button>
+        <form [formGroup]="forgotform" (ngSubmit)="onSubmit()">
+            <div class="email">
+                <mat-form-field appearance="outline">
+                    <mat-label>username</mat-label>
+                    <input matInput placeholder="" formControlName="username">
+                    <mat-error>Enter valid user name</mat-error>
+                </mat-form-field>
+            </div>
+            <button class="mat-raised-button">Next</button>
+        </form>
     </div>
 </div>

@@ -1,12 +1,12 @@
 <div class="OuterDiv">
     <div class="InnerDiv">
-        <div class="funDo">           
-                <b class="F">F</b>
-                <b class="u">u</b>
-                <b class="n">n</b>
-                <b class="D">D</b>
-                <b class="o">o</b>
-                <b class="oo">o</b>
+        <div class="funDo">
+            <b class="F">F</b>
+            <b class="u">u</b>
+            <b class="n">n</b>
+            <b class="D">D</b>
+            <b class="o">o</b>
+            <b class="oo">o</b>
         </div>
         <div>
             <p class="span">Sign in</p>
@@ -15,34 +15,38 @@
             <p> Use your FunDoo Account </p>
         </div>
         <div class="SecondInnerDiv">
-            <div>
-                <mat-form-field appearance="outline" class="email">
-                    <mat-label>Email</mat-label>
-                    <input matInput placeholder="">
-                </mat-form-field>
-            </div>
-            <div>
-                <mat-form-field appearance="outline" class="password">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="">
-                </mat-form-field>
-            </div>
-            <button class="Forgot"><b>Forgot Password?</b></button>
-            <div> Not your computer? Use Guest mode to sign in privately.<br>
-                <button class="Instead">
-                    <b>Learn more</b>
-                </button>
-            </div>
-            <div class="matButton">
-                <div class="Create">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <mat-form-field appearance="outline" class="email">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="" formControlName="username">
+                        <mat-error>Enter valid user name</mat-error>
+                    </mat-form-field>
+                </div>
+                <div>
+                    <mat-form-field appearance="outline" class="password">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="" formControlName="password">
+                        <mat-error>Enter valid Password</mat-error>
+                    </mat-form-field>
+                </div>
+                <button class="Forgot" routerLink="/forgot"><b>Forgot Password?</b></button>
+                <div> Not your computer? Use Guest mode to sign in privately.<br>
                     <button class="Instead">
-                        <b>Create account</b>
+                        <b>Learn more</b>
                     </button>
                 </div>
-                <div class="next">
-                    <button class="mat-raised-button"> Next </button>
+                <div class="matButton">
+                    <div class="Create">
+                        <button class="Instead">
+                            <b routerLink="/signup">Create account</b>
+                        </button>
+                    </div>
+                    <div class="next">
+                        <button class="mat-raised-button"> Next </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 
