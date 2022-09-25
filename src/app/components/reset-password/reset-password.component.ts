@@ -15,7 +15,8 @@ export class ResetPasswordComponent implements OnInit {
       this.resetForm=this.formBuilder.group({
         newpassword: ['', [Validators.required, Validators.pattern('(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-])[a-zA-Z0-9!@#$%^&*()_+=-]{8,}$'), Validators.minLength(8)]],
         confirmnewPassword: ['',Validators.required]
-      });
+      },
+    { validator: MustMatch('password', 'confirmPassword')});
   }
   onSubmit(){
     if (this.resetForm.valid) {
@@ -31,5 +32,18 @@ export class ResetPasswordComponent implements OnInit {
       console.log('invalid data', this.resetForm.value);
       console.log("api call will not occur")
     }
+  }
+}
+export function MustMatch(controlName: string, matchingControlName: string) {
+  return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+
+      // set error on matchingControl if validation fails
+      if (control.value !== matchingControl.value) {
+          matchingControl.setErrors({ mustMatch: true });
+      } else {
+          matchingControl.setErrors(null);
+      }
   }
 }

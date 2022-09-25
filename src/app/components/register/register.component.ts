@@ -18,7 +18,10 @@ export class RegisterComponent implements OnInit {
       username: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.pattern('(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-])[a-zA-Z0-9!@#$%^&*()_+=-]{8,}$'), Validators.minLength(8)]],
       confirmPassword: ['', Validators.required]
-    });
+    },
+    {
+      validator: MustMatch('password', 'confirmPassword')
+  });
   }
 
   onSubmit() {
@@ -41,4 +44,17 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+}
+export function MustMatch(controlName: string, matchingControlName: string) {
+  return (formGroup: FormGroup) => {
+      const control = formGroup.controls[controlName];
+      const matchingControl = formGroup.controls[matchingControlName];
+
+      // set error on matchingControl if validation fails
+      if (control.value !== matchingControl.value) {
+          matchingControl.setErrors({ mustMatch: true });
+      } else {
+          matchingControl.setErrors(null);
+      }
+  }
 }
