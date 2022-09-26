@@ -1,0 +1,27 @@
+<head>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<div class="OuterDiv">
+    <div class="InnerDiv">
+        <div *ngIf="isShow">
+            <input class="search" type="text" placeholder="Title">
+        </div>
+        <div *ngIf="!isShow || isShow" (click)="show()">
+                <input class="mySearch" type="text" placeholder="Take a note">
+                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">check_box</span>
+                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">brush</span>
+                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">photo</span>
+        </div>
+        <div *ngIf="isShow">
+            <div class="ic" style="flex-direction: row;">
+                <div>
+                    <app-icon></app-icon>
+                </div>
+                <div class="close">
+                    <button (click)="close()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

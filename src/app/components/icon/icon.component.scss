@@ -1,0 +1,20 @@
+.OuterDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 490px;
+    height: 40px;
+}
+.add{
+    padding-top: 7px;
+    border: 1px;
+    margin: 0 8px;
+    .material-symbols-outlined{
+        padding: 8px;
+    }
+    cursor: pointer;
+    :hover{
+        border-radius: 50%;
+        background-color: #f1f3f4;
+    }
+}

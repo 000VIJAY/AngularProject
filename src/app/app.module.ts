@@ -13,13 +13,31 @@ import {MatInputModule} from '@angular/material/input';
 import { ForgotComponent } from './components/forgot/forgot.component';
 import {MatButtonModule} from '@angular/material/button';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
+import { CreateNoteComponent } from './components/create-note/create-note.component';
+import { DisplayNoteComponent } from './components/display-note/display-note.component';
+import { IconComponent } from './components/icon/icon.component';
+import { ArchiveComponent } from './components/archive/archive.component';
+import { TrashComponent } from './components/trash/trash.component';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
     ForgotComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    DashboardComponent,
+    GetAllNotesComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent,
+    IconComponent,
+    ArchiveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +46,7 @@ import { ResetPasswordComponent } from './components/reset-password/reset-passwo
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule,HttpClientModule
+    ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

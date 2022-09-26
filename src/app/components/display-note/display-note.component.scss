@@ -1,0 +1,35 @@
+.OuterDiv{
+    width: 400px;
+    padding:25px 30px;
+    border: 1px solid rgb(186, 184, 184);
+    padding-right: 10px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 1px 1px 1px  rgb(186, 184, 184);
+}
+.search{
+    height: 30px;
+     border: 0px transparent;
+     font-size: large;
+     background-color: transparent;
+     width: 100%;
+     margin: 0px;
+     padding: 2px 5px 7px 2px;
+     cursor: pointer;
+}
+.mySearch
+{
+    height: 30px;
+    width: 100%;
+    letter-spacing: .01428571em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    background-color: transparent;
+    border: 0px transparent;
+    border-width: 1px 1px 1px 6px;
+    min-height: 28px;
+    padding: 2px 5px 7px 2px;
+    cursor: pointer;
+}

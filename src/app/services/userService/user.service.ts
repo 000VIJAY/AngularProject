@@ -35,7 +35,7 @@ export class UserService {
         'Content-Type': 'application/json'
       })
     }
-    return this.httpService.postService('https://localhost:44300/user/ForgotPassword/{email}', data, false, header)
+    return this.httpService.postService(`https://localhost:44300/user/ForgotPassword/${data.Email}`, data, false, header)
   }
   reset(data: any) {
     let header = {
