@@ -1,17 +1,13 @@
-<head>
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
 <div class="OuterDiv">
     <div class="InnerDiv">
         <div *ngIf="isShow">
-            <input class="search" type="text" placeholder="Title">
+            <input class="search" type="text" placeholder="Title"[(ngModel)]="title">
         </div>
-        <div *ngIf="!isShow || isShow" (click)="show()">
-                <input class="mySearch" type="text" placeholder="Take a note">
-                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">check_box</span>
-                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">brush</span>
-                <span *ngIf="!isShow" class="material-symbols-outlined" style="cursor: pointer;">photo</span>
+        <div class="nDiv" *ngIf="!isShow || isShow" (click)="show()">
+            <input class="mySearch" type="text" placeholder="Take a note" [(ngModel)]="description">
+            <img class="divImg" src="../../../assets/check_box_FILL0_wght300_GRAD0_opsz48.svg" *ngIf="!isShow">
+            <img class="divImg" src="../../../assets/brush_FILL0_wght300_GRAD0_opsz48.svg" *ngIf="!isShow">
+            <img class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg" *ngIf="!isShow">
         </div>
         <div *ngIf="isShow">
             <div class="ic" style="flex-direction: row;">

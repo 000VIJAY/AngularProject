@@ -8,13 +8,16 @@
 .add{
     padding-top: 7px;
     border: 1px;
-    margin: 0 8px;
-    .material-symbols-outlined{
-        padding: 8px;
-    }
+    margin: 0px;
     cursor: pointer;
     :hover{
-        border-radius: 50%;
+        border-radius: 40%;
         background-color: #f1f3f4;
     }
+}
+.divImg {
+    height: 24px;
+    width: 24px;
+    padding: 8px 5px;
+    margin: 3px;
 }
