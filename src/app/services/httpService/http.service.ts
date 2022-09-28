@@ -17,7 +17,7 @@ export class HttpService {
   {
     console.log(requestData);
 
-    return this.httpClient.post(url,requestData,token && httpOptions)
+    return this.httpClient.put(url,requestData,token && httpOptions)
   }
   getService( url:string,token:boolean=false,httpOptions:any)
   {

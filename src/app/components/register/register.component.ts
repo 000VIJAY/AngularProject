@@ -43,7 +43,6 @@ export class RegisterComponent implements OnInit {
       console.log("api call will not occur")
     }
   }
-
 }
 export function MustMatch(controlName: string, matchingControlName: string) {
   return (formGroup: FormGroup) => {

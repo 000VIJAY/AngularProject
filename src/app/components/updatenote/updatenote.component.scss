@@ -1,14 +1,5 @@
-.OuterDiv {
-    width: 600px;
-    margin:32px auto 16px auto;
-}
 
 .InnerDiv {
-    border: 1px solid rgb(186, 184, 184);
-    padding: 2px 10px;
-    border-radius: 8px;
-    box-sizing: border-box;
-    box-shadow: 0 3px 3px 3px rgb(222, 222, 222);
     cursor: pointer;
 }
 
@@ -44,11 +35,13 @@ input:focus {
 .ic {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .close {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
     button {
         border: none;
@@ -64,16 +57,8 @@ input:focus {
         background-color: #f1f3f4;
     }
 }
-
 .nDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.divImg {
-    height: 24px;
-    width: 24px;
-    padding: 8px;
-    margin: 3px;
 }

@@ -1,0 +1,18 @@
+<div class="InnerDiv">
+    <div>
+        <input class="search" type="text" placeholder="Title" [(ngModel)]="title">
+    </div>
+    <div class="nDiv">
+        <input class="mySearch" type="text" placeholder="Take a note" [(ngModel)]="description">
+    </div>
+    <div>
+        <div class="ic">
+            <div>
+                <app-icon></app-icon>
+            </div>
+            <div class="close">
+                <button (click)="onNoClick()">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

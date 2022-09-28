@@ -1,13 +1,34 @@
 <div class="innerDiv">
-    <div class="OuterDiv" *ngFor="let note of childMessage">
-        <div>
-            <p> {{note.title}}</p>
+    <div class="OuteDiv" *ngFor="let note of childMessage">
+        <div (click)="openDialog(note)">
+            <div>
+                <p> {{note.title}}</p>
+            </div>
+            <div>
+                <p>{{note.description}}</p>
+            </div>
         </div>
         <div>
-            <p>{{note.description}}</p>
-        </div>
-        <div >
-            <app-icon></app-icon>
+            <div class="OuterDiv">
+                <div role="button" class="add">
+                    <img class="divImg" src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+                <div role="button" class="add">
+                    <img class="divImg" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+                <div role="button" class="add">
+                    <img class="divImg" src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+                <div role="button" class="add">
+                    <img class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+                <div role="button" class="add">
+                    <img  class="divImg"src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+                <div role="button" class="add">
+                    <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg">
+                </div>
+            </div>
         </div>
     </div>
 </div>

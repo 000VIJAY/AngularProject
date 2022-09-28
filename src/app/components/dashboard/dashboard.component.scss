@@ -41,14 +41,12 @@
     flex-direction: row;
     border: 1px solid transparent;
     cursor: pointer;
-
     :hover {
         background-color: transparent;
         box-sizing: border-box;
         box-shadow: 0 1px 1px 1px rgb(186, 184, 184);
     }
 }
-
 .searchBar {
     border-radius: 12px;
     margin-left: auto;
@@ -73,6 +71,9 @@
     width: 510px;
     margin: 0px;
 }
+input:focus {
+    outline: none;
+}
 
 .example-is-mobile .example-toolbar {
     position: fixed;
@@ -92,6 +93,7 @@ h1.example-app-name {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
     flex: 1;
+    width: 100%;
 }
 
 .example-is-mobile .example-sidenav-container {

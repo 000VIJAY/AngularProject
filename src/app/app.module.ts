@@ -25,6 +25,8 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FormsModule } from '@angular/forms';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { FormsModule } from '@angular/forms';
     DisplayNoteComponent,
     IconComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    UpdatenoteComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { FormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule,FormsModule
+    ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule,FormsModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
