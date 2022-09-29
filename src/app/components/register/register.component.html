@@ -9,7 +9,7 @@
             <b class="oo">o</b>
         </div>
         <div class="InnerDiv">
-            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
                 <div class="myDiv">
                     <span>
                         <h1>Create Your FunDoo Account</h1>
@@ -42,7 +42,8 @@
                     <div class="nameDiv">
                         <mat-form-field appearance="outline" class="PasswordDiv">
                             <mat-label>Password</mat-label>
-                            <input matInput placeholder="" type="password" formControlName="password">
+                            <input matInput placeholder="" type="password" formControlName="password"
+                                [type]="show ? 'text' : 'password'">
                             <mat-error>Enter valid password</mat-error>
                         </mat-form-field>
                         <mat-form-field appearance="outline" class="Confirm">
@@ -55,7 +56,7 @@
                         <p>Use 8 or more characters with a mix of letters, numbers & symbols</p>
                     </div>
                     <label style="cursor:pointer;">
-                        <input type="checkbox">
+                        <input type="checkbox" (click)="toggleShow()">
                         Show Password</label>
                     <div class="matButton">
                         <div class="loginButton">

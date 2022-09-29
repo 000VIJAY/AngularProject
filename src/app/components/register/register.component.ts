@@ -9,6 +9,7 @@ import { UserService } from 'src/app/services/userService/user.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm !: FormGroup;
+  show: boolean = false;
   constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   ngOnInit(): void {
@@ -19,9 +20,9 @@ export class RegisterComponent implements OnInit {
       password: ['', [Validators.required, Validators.pattern('(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*()_+=-])[a-zA-Z0-9!@#$%^&*()_+=-]{8,}$'), Validators.minLength(8)]],
       confirmPassword: ['', Validators.required]
     },
-    {
-      validator: MustMatch('password', 'confirmPassword')
-  });
+      {
+        validator: MustMatch('password', 'confirmPassword')
+      });
   }
 
   onSubmit() {
@@ -37,23 +38,25 @@ export class RegisterComponent implements OnInit {
       }
       this.user.signup(data).subscribe((result: any) => console.log(result))
     }
-    else
-    {
-      console.log('invalid data',this.registerForm.value);
+    else {
+      console.log('invalid data', this.registerForm.value);
       console.log("api call will not occur")
     }
+  }
+  toggleShow() {
+    this.show = !this.show;
   }
 }
 export function MustMatch(controlName: string, matchingControlName: string) {
   return (formGroup: FormGroup) => {
-      const control = formGroup.controls[controlName];
-      const matchingControl = formGroup.controls[matchingControlName];
+    const control = formGroup.controls[controlName];
+    const matchingControl = formGroup.controls[matchingControlName];
 
-      // set error on matchingControl if validation fails
-      if (control.value !== matchingControl.value) {
-          matchingControl.setErrors({ mustMatch: true });
-      } else {
-          matchingControl.setErrors(null);
-      }
+    // set error on matchingControl if validation fails
+    if (control.value !== matchingControl.value) {
+      matchingControl.setErrors({ mustMatch: true });
+    } else {
+      matchingControl.setErrors(null);
+    }
   }
 }

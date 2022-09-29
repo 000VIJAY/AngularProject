@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { NoteService } from 'src/app/services/noteService/note.service';
 
 @Component({
   selector: 'app-icon',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent implements OnInit {
-
-  constructor() { }
+  @Input() childMessage: any;
+  constructor(private not: NoteService) { }
 
   ngOnInit(): void {
+  } 
+  OnSubmit() :void{
+    console.log(this.childMessage)
+    this.not.trashNote(this.childMessage.noteId).subscribe((result:any)=>console.log(result))
   }
-
+  Archive():void{
+    console.log(this.childMessage)
+    this.not.archiveNote(this.childMessage.noteId).subscribe((result:any)=>console.log(result))
+  }
 }
