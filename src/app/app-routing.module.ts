@@ -6,6 +6,7 @@ import { ForgotComponent } from './components/forgot/forgot.component';
 import { GetAllNotesComponent } from './components/get-all-notes/get-all-notes.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
+import { RemindersComponent } from './components/reminders/reminders.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { TrashComponent } from './components/trash/trash.component';
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   children:[
     {path:'Notes',component:GetAllNotesComponent},
     {path:'Archive',component:ArchiveComponent},
-    {path:'Trash',component:TrashComponent}
+    {path:'Trash',component:TrashComponent},
+    {path:'Reminders',component:RemindersComponent}
 ]}
 ];
 

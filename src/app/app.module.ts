@@ -29,6 +29,7 @@ import { UpdatenoteComponent } from './components/updatenote/updatenote.componen
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
+import { RemindersComponent } from './components/reminders/reminders.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ArchiveComponent,
     TrashComponent,
     UpdatenoteComponent,
+    RemindersComponent,
   ],
   imports: [
     BrowserModule,

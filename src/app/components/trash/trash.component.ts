@@ -17,18 +17,17 @@ export class TrashComponent implements OnInit {
     this.note.GetNotes().subscribe((result: any) => {
       console.log(result);
       this.noteArr =  result.noteList.filter((data:any)=>{
-        console.log("notes")
         return data.isTrash == true
       })
       this.noteArr.reverse();
     })
   }
-  OnSubmit() :void{
-    console.log(this.noteArr.noteList)
-    this.note.trashNote(this.noteArr.noteList.noteId).subscribe((result:any)=>console.log(result))
-  }
-  OnDeleteForever(){
-    console.log(this.noteArr)
-    this.note.DeleteNote(this.noteArr.noteList.noteId).subscribe((result:any)=>console.log(result))
-  }
+  // OnSubmit(note:any) :void{
+  //   console.log(note)
+  //   this.note.trashNote(note.noteId).subscribe((result:any)=>console.log(result))
+  // }
+  // OnDeleteForever(note:any){
+  //   console.log(note)
+  //   this.note.DeleteNote(note.noteId).subscribe((result:any)=>console.log(result))
+  // }
 }

@@ -1,20 +1,21 @@
-<div class="innerDiv">
-    <div class="OuteDiv" *ngFor="let noteArr of noteArr">
+<app-display-note [childMessage]="noteArr" ></app-display-note>
+<!-- <div class="innerDiv">
+    <div class="OuteDiv" *ngFor="let note of noteArr">
         <div>
             <div>
-                <p> {{noteArr.title}}</p>
+                <p> {{note.title}}</p>
             </div>
             <div>
-                <p>{{noteArr.description}}</p>
+                <p>{{note.description}}</p>
             </div>
         </div>
             <div class="OuterDiv">
-                <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()">
+                <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever(note)">
                     <img class="divImg" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg">
                 </div>
-                <div role="button" class="add" matTooltip="Restore" (click)="OnSubmit()">
+                <div role="button" class="add" matTooltip="Restore" (click)="OnSubmit(note)">
                     <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
                 </div>
             </div>
     </div>
-</div>
+</div> -->

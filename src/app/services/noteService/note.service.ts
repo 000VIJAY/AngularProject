@@ -68,6 +68,16 @@ export class NoteService {
         'Authorization': "Bearer "+this.token 
       })
     }
-    return this.http.DeleteService(`https://localhost:44300/Note/DeleteNote/${dat.NoteId}`, true, header)
+    return this.http.DeleteService(`https://localhost:44300/Note/DeleteNote/${dat}`, true, header)
+  }
+  ReminderNote(dat: any){
+    console.log(dat,this.token);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer "+this.token 
+      })
+    }
+    return this.http.putService(`https://localhost:44300/Note/ArchieveNote/${dat}`, {}, true, header)
   }
 }

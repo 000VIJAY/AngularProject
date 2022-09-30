@@ -1,29 +1,38 @@
 <div class="OuterDiv">
-        <div role="button" class="add" matTooltip="Remind me">
-            <img class="divImg" src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
+    <div role="button" class="add" matTooltip="Remind me">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
+    </div>
+    <div role="button" class="add" matTooltip="collaborator">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
+    </div>
+    <div role="button" class="add" matTooltip="background color">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
+    </div>
+    <div role="button" class="add" matTooltip="image">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
+    </div>
+    <div role="button" class="add" (click)="Archive()">
+        <img *ngIf="name.name==Get" matTooltip="Archive" class="divImg" src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==archive" class="divImg" matTooltip="UnAachive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
+    </div>
+    <div class="OuterDiv" *ngIf="name.name==nam">
+        <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()">
+            <img class="divImg" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
-        <div role="button" class="add" matTooltip="collaborator">
-            <img class="divImg" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
-        </div>
-        <div role="button" class="add" matTooltip="background color">
-            <img class="divImg" src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
-        </div>
-        <div role="button" class="add" matTooltip="image">
-            <img class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
-        </div>
-        <div role="button" class="add" matTooltip="Archive" (click)="Archive()">
-            <img class="divImg" src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
-        </div>
-        <div role="button" class="add">
-            <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
-                mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>
-                    <span style="font-size:large;" (click)="OnSubmit()">Delete Note</span>
-                </button>
-                <button mat-menu-item>
-                    <span style="font-size:large;">Add Label</span>
-                </button>
-            </mat-menu>
+        <div role="button" class="add" matTooltip="Restore" (click)="OnDelete()">
+            <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
     </div>
+    <div *ngIf="name.name==Get ||name.name==archive" role="button" class="add">
+        <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
+            mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+                <span style="font-size:large;" (click)="OnSubmit()">Delete Note</span>
+            </button>
+            <button mat-menu-item>
+                <span style="font-size:large;">Add Label</span>
+            </button>
+        </mat-menu>
+    </div>
+</div>
