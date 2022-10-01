@@ -1,22 +1,67 @@
-.OuterDiv{
+.OuterDiv {
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 40px;
 }
-.add{
+
+.add {
     padding-top: 7px;
     border: 1px;
     margin: 0px;
     cursor: pointer;
-    :hover{
+
+    :hover {
         border-radius: 50%;
         background-color: #f1f3f4;
     }
 }
+
+.aadd {
+    padding-top: 7px;
+    border: 1px;
+    margin: 0px;
+    cursor: pointer;
+
+    :hover {
+        border-radius: 50%;
+        background-color: #f1f3f4;
+    }
+
+    ::ng-deep.mat-menu-panel {
+        max-width: none !important;
+        width: 420px
+    }
+}
+
 .divImg {
     height: 24px;
     width: 24px;
-    padding: 8px 9.5px;
-    margin: 3px;
+    padding: 8px 7px;
+    margin: 2px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+}
+
+
+.new {
+    padding: 4px;
+    margin: 1px;
+
+    button {
+        height: 28px;
+        border-radius: 50%;
+        border: none;
+        width: 28px;
+        cursor: pointer;
+    }
+
+    :hover {
+        border: 1px solid green;
+    }
 }

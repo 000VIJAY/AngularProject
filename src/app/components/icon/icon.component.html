@@ -1,19 +1,62 @@
 <div class="OuterDiv">
     <div role="button" class="add" matTooltip="Remind me">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+            src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" matTooltip="collaborator">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+            src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add" matTooltip="background color">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
+    <div role="button" class="aadd" matTooltip="background color" mat-button [matMenuTriggerFor]="belowMenu">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+            src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
+        <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
+            <div class="back">
+                <div class="new">
+                    <button  matTooltip="red" style="background-color: red;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="orange" style="background-color: orange;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="yellow" style="background-color: yellow;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="purple" style="background-color: #d7aefb;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="green" style="background-color: green;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="teal" style="background-color: teal;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="blue" style="background-color: blue;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="pink" style="background-color: pink;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="brown" style="background-color: brown;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="gray" style="background-color: gray;"></button>
+                </div>
+                <div class="new">
+                    <button matTooltip="darkblue" style="background-color: darkblue;"></button>
+                </div>
+            </div>
+        </mat-menu>
     </div>
     <div role="button" class="add" matTooltip="image">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+            src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" (click)="Archive()">
-        <img *ngIf="name.name==Get" matTooltip="Archive" class="divImg" src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
-        <img *ngIf="name.name==archive" class="divImg" matTooltip="UnAachive" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==Get" matTooltip="Archive" class="divImg"
+            src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="name.name==archive" class="divImg" matTooltip="Unarchive"
+            src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
     <div class="OuterDiv" *ngIf="name.name==nam">
         <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()">
@@ -27,8 +70,8 @@
         <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
             mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-                <span style="font-size:large;" (click)="OnSubmit()">Delete Note</span>
+            <button mat-menu-item (click)="OnDelete()">
+                <span style="font-size:large;" >Delete Note</span>
             </button>
             <button mat-menu-item>
                 <span style="font-size:large;">Add Label</span>

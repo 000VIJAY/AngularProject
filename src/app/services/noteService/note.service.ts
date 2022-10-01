@@ -70,7 +70,7 @@ export class NoteService {
     }
     return this.http.DeleteService(`https://localhost:44300/Note/DeleteNote/${dat}`, true, header)
   }
-  ReminderNote(dat: any){
+  BackgroundColor(dat: any){
     console.log(dat,this.token);
     let header = {
       headers: new HttpHeaders({

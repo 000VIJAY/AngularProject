@@ -11,12 +11,12 @@ import { UpdatenoteComponent } from '../updatenote/updatenote.component';
 })
 export class DisplayNoteComponent implements OnInit {
   @Input() childMessage: any;
-  constructor(private dialog: MatDialog, private note:NoteService ) { }
+  constructor(private dialog: MatDialog) { }
   ngOnInit(): void {
   }
   openDialog(note:any): void {
     const dialogRef = this.dialog.open(UpdatenoteComponent, {
-      width: '620px',
+      width: '600px',
       data: note,
     });
 

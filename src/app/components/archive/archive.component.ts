@@ -17,7 +17,7 @@ export class ArchiveComponent implements OnInit {
       console.log(result);
       this.noteArr = result.noteList
       this.noteArr =  result.noteList.filter((data:any)=>{
-        console.log("notes")
+        console.log("notes" ,this.noteArr)
         return data.isArchieve == true && data.isTrash == false
       })
       this.noteArr.reverse();

@@ -25,10 +25,6 @@ export class IconComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  OnSubmit(): void {
-    console.log(this.childMessage)
-    this.not.trashNote(this.childMessage.noteId).subscribe((result: any) => console.log(result))
-  }
   Archive(): void {
     console.log(this.childMessage)
     this.not.archiveNote(this.childMessage.noteId).subscribe((result: any) => console.log(result))
