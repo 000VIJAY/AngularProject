@@ -1,5 +1,5 @@
 <div class="innerDiv">
-    <div class="OuteDiv" *ngFor="let note of childMessage">
+    <div class="OuteDiv" *ngFor="let note of childMessage" [style.Background]="note.color">
         <div (click)="openDialog(note)">
             <div>
                 <p> {{note.title}}</p>
@@ -9,35 +9,6 @@
             </div>
         </div>
         <div>
-            <!-- <div class="OuterDiv">
-                <div role="button" class="add" matTooltip="Remind me">
-                    <img class="divImg" src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
-                </div>
-                <div role="button" class="add" matTooltip="collaborator">
-                    <img class="divImg" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
-                </div>
-                <div role="button" class="add" matTooltip="background color">
-                    <img class="divImg" src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
-                </div>
-                <div role="button" class="add" matTooltip="image">
-                    <img class="divImg" src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
-                </div>
-                <div role="button" class="add" matTooltip="Archive">
-                    <img class="divImg" src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg" (click)="archive(note.noteId)">
-                </div>
-                <div role="button" class="add" matTooltip="More" >
-                    <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" mat-icon-button [matMenuTriggerFor]="menu"
-                    aria-label="Example icon-button with a menu">
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item>
-                            <span (click)="OnSubmit(note)">Delete Note</span>
-                        </button>
-                        <button mat-menu-item>
-                            <span>Add Label</span>
-                        </button>
-                    </mat-menu>
-                </div>
-            </div> -->
             <app-icon [childMessage]="note"></app-icon>
         </div>
     </div>

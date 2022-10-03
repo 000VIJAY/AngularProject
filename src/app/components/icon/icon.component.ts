@@ -37,7 +37,7 @@ export class IconComponent implements OnInit {
     console.log(this.childMessage)
     this.not.DeleteNote(this.childMessage.noteId).subscribe((result: any) => console.log(result))
   }
-  color:any =[{ "name": "Red" }, { "name": "Cyan" }, { "name": "Blue" }, { "name": "DarkBlue" },
+  color:any[] =[{ "name": "Red" }, { "name": "Cyan" }, { "name": "Blue" }, { "name": "DarkBlue" },
   { "name": "LightBlue" }, { "name": "Orange" }, { "name": "Black" },
   { "name": "Green" }, { "name": "Pink" }, { "name": "Purple" }, { "name": "Maroon" }, { "name": "Yellow" }]
   changeColor(name:any){

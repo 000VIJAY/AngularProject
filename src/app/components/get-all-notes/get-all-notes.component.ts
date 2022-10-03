@@ -18,7 +18,7 @@ export class GetAllNotesComponent implements OnInit {
       console.log(result);
       this.noteArr = result.noteList
       this.noteArr =  result.noteList.filter((data:any)=>{
-        console.log("notes" ,this.noteArr)
+        // console.log("notes" ,this.noteArr)
         return data.isArchieve == false && data.isTrash == false
       })
       this.noteArr.reverse();

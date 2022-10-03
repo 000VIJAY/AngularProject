@@ -7,13 +7,13 @@
         <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="aadd" matTooltip="background color" mat-button [matMenuTriggerFor]="belowMenu">
+    <div role="button" class="add" matTooltip="background color" mat-button [matMenuTriggerFor]="belowMenu">
         <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
         <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
             <div class="back">
                 <div class="new" *ngFor="let col of color">
-                    <button (click)="changeColor(col.name)">{{col.name}}</button>
+                    <button (click)="changeColor(col.name)"[style.Background]="col.name" [matTooltip]="col.name"></button>
                 </div>
             </div>
         </mat-menu>
