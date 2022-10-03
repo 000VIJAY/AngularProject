@@ -11,6 +11,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 export class UpdatenoteComponent implements OnInit {
 title:any;
 description:any;
+
   constructor(public dialogRef: MatDialogRef<UpdatenoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any, private not:NoteService) { }
 

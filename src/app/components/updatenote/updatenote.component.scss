@@ -1,7 +1,6 @@
 
 .InnerDiv {
     cursor: pointer;
-    width: 300px;
 }
 
 .search {
@@ -37,17 +36,15 @@ input:focus {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 .close {
     display: flex;
     align-items: flex-start;
-
+    padding-left: 30%;
     button {
         border: none;
         padding: 8px 24px;
-        margin-right: 15px;
         ;
         background-color: transparent;
         cursor: pointer;

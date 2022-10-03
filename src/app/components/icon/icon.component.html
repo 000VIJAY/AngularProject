@@ -1,59 +1,29 @@
 <div class="OuterDiv">
     <div role="button" class="add" matTooltip="Remind me">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+        <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" matTooltip="collaborator">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+        <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="aadd" matTooltip="background color" mat-button [matMenuTriggerFor]="belowMenu">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+        <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
         <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
             <div class="back">
-                <div class="new">
-                    <button  matTooltip="red" style="background-color: red;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="orange" style="background-color: orange;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="yellow" style="background-color: yellow;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="purple" style="background-color: #d7aefb;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="green" style="background-color: green;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="teal" style="background-color: teal;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="blue" style="background-color: blue;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="pink" style="background-color: pink;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="brown" style="background-color: brown;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="gray" style="background-color: gray;"></button>
-                </div>
-                <div class="new">
-                    <button matTooltip="darkblue" style="background-color: darkblue;"></button>
+                <div class="new" *ngFor="let col of color">
+                    <button (click)="changeColor(col.name)">{{col.name}}</button>
                 </div>
             </div>
         </mat-menu>
     </div>
     <div role="button" class="add" matTooltip="image">
-        <img *ngIf="name.name==Get || name.name==archive" class="divImg"
+        <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" (click)="Archive()">
-        <img *ngIf="name.name==Get" matTooltip="Archive" class="divImg"
+        <img *ngIf="name.name!=archive && name.name!=nam" matTooltip="Archive" class="divImg"
             src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
         <img *ngIf="name.name==archive" class="divImg" matTooltip="Unarchive"
             src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
@@ -66,7 +36,7 @@
             <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
     </div>
-    <div *ngIf="name.name==Get ||name.name==archive" role="button" class="add">
+    <div *ngIf="name.name!=nam" role="button" class="add">
         <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
             mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-menu #menu="matMenu">

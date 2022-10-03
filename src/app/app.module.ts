@@ -30,6 +30,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import { RemindersComponent } from './components/reminders/reminders.component';
+import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,7 +58,7 @@ import { RemindersComponent } from './components/reminders/reminders.component';
     ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule,FormsModule,
     MatDialogModule,MatTooltipModule,MatMenuModule
   ],
-  providers: [],
+  providers: [AuthGaurdService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

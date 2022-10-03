@@ -78,6 +78,6 @@ export class NoteService {
         'Authorization': "Bearer "+this.token 
       })
     }
-    return this.http.putService(`https://localhost:44300/Note/ArchieveNote/${dat}`, {}, true, header)
+    return this.http.putService(`https://localhost:44300/Note/UpdateColor/${dat.NoteId}/${dat.color}`, dat, true, header)
   }
 }

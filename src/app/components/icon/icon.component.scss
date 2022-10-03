@@ -44,21 +44,19 @@
 .back {
     display: flex;
     align-items: center;
-    flex-direction: row;
-    width: auto;
+    flex-wrap: wrap;
+
 }
-
-
 .new {
     padding: 4px;
     margin: 1px;
-
     button {
-        height: 28px;
+        height: 57px;
         border-radius: 50%;
         border: none;
-        width: 28px;
+        width: 57px;
         cursor: pointer;
+        font-size: 12px;
     }
 
     :hover {
