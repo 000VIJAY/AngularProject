@@ -31,6 +31,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import { RemindersComponent } from './components/reminders/reminders.component';
 import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
+import { CollaboratorComponent } from './components/collaborator/collaborator.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,6 +49,7 @@ import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
     TrashComponent,
     UpdatenoteComponent,
     RemindersComponent,
+    CollaboratorComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +59,7 @@ import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule,FormsModule,
-    MatDialogModule,MatTooltipModule,MatMenuModule
+    MatDialogModule,MatTooltipModule,MatMenuModule,MatSnackBarModule
   ],
   providers: [AuthGaurdService],
   bootstrap: [AppComponent]

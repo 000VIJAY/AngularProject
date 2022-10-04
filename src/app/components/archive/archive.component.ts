@@ -14,7 +14,7 @@ export class ArchiveComponent implements OnInit {
   }
   getAllNotes() {
     this.note.GetNotes().subscribe((result: any) => {
-      console.log(result);
+      // console.log(result);
       this.noteArr = result.noteList
       this.noteArr =  result.noteList.filter((data:any)=>{
         console.log("notes" ,this.noteArr)
@@ -22,5 +22,9 @@ export class ArchiveComponent implements OnInit {
       })
       this.noteArr.reverse();
     })
+  }
+  receiveMessage(event:any) {
+    console.log(event) ;
+    this.getAllNotes();
   }
 }

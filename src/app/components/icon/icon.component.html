@@ -3,7 +3,7 @@
         <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add" matTooltip="collaborator">
+    <div role="button" class="add" matTooltip="collaborator" (click)="openDialog()">
         <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
@@ -13,7 +13,7 @@
         <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
             <div class="back">
                 <div class="new" *ngFor="let col of color">
-                    <button (click)="changeColor(col.name)"[style.Background]="col.name" [matTooltip]="col.name"></button>
+                    <button (click)="changeColor(col.name)"[style.Background]="col.name" [matTooltip]="col.name"  (click)="opSnackBar()"></button>
                 </div>
             </div>
         </mat-menu>
@@ -22,17 +22,17 @@
         <img *ngIf="name.name!=nam" class="divImg"
             src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add" (click)="Archive()">
-        <img *ngIf="name.name!=archive && name.name!=nam" matTooltip="Archive" class="divImg"
+    <div role="button" class="add" (click)="Archive()" >
+        <img *ngIf="name.name!=archive && name.name!=nam" matTooltip="Archive" class="divImg" (click)="openSnackBar()"
             src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
-        <img *ngIf="name.name==archive" class="divImg" matTooltip="Unarchive"
+        <img *ngIf="name.name==archive" class="divImg" matTooltip="Unarchive"(click)="opeSnackBar()"
             src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
     <div class="OuterDiv" *ngIf="name.name==nam">
-        <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()">
+        <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()" (click)="oeSnackBar()">
             <img class="divImg" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
-        <div role="button" class="add" matTooltip="Restore" (click)="OnDelete()">
+        <div role="button" class="add" matTooltip="Restore" (click)="OnDelete()" (click)="oSnackBar()">
             <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
     </div>
@@ -40,7 +40,7 @@
         <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
             mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-menu #menu="matMenu">
-            <button mat-menu-item (click)="OnDelete()">
+            <button mat-menu-item (click)="OnDelete()" (click)="SnackBar()">
                 <span style="font-size:large;" >Delete Note</span>
             </button>
             <button mat-menu-item>

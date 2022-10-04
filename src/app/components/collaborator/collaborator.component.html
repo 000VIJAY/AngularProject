@@ -1,0 +1,38 @@
+<div class="InnerDiv">
+    <div class="collabs">
+        <span>Collaborators</span>
+    </div>
+    <div class="aDiv">
+        <div class="xDiv">
+            <div class="yDiv">
+                <img class="imDiv" src="../../../assets/account_circle_FILL0_wght300_GRAD0_opsz48.svg">
+            </div>
+            <div class="zDiv">
+                <span style="margin:0px ; font-size: 13px; font-weight: 700;">
+                    {{this.data.user.firstName}}
+                    <span style="font-size:13px; font-style:italic; margin-left: 2px;">(Owner)</span>
+                </span><br>
+                <span>{{this.data.user.email}}</span>
+            </div>
+            <!-- <div *ngFor="let result of res">
+                <span>{{this.result.collabEmailId}}</span>
+            </div> -->
+        </div>
+        <div class="xDiv">
+            <div class="yDiv">
+                <img class="imgDiv" src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
+            </div>
+            <div class="zDiv">
+                <input class="mySearch" type="text" placeholder="email to share with" [(ngModel)]="email">
+            </div>
+        </div>
+    </div>
+    <div class="ic">
+        <div class="close" routerLink=".">
+            <button>Cancel</button>
+        </div>
+        <div class="close">
+            <button (click)="onNoClick()">Save</button>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-<app-display-note [childMessage]="noteArr" ></app-display-note>
+<app-display-note [childMessage]="noteArr" (messageEvent)="receiveMessage($event)"  ></app-display-note>
 <!-- <div class="innerDiv">
     <div class="OuteDiv" *ngFor="let note of noteArr">
         <div>

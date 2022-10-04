@@ -24,4 +24,8 @@ export class GetAllNotesComponent implements OnInit {
       this.noteArr.reverse();
     })
   }
+  receiveMessage(event:any) {
+    console.log(event) ;
+    this.getAllNotes();
+  }
 }

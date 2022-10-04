@@ -9,7 +9,7 @@
             </div>
         </div>
         <div>
-            <app-icon [childMessage]="note"></app-icon>
+            <app-icon [childMessage]="note" (messageEvent)="receiveMessage($event)"></app-icon>
         </div>
     </div>
 </div>

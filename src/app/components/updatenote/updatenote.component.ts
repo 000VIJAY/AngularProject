@@ -35,4 +35,9 @@ description:any;
     }
     this.not.updateNotes(dat).subscribe((result: any) => console.log(result))
   }
+  message:any;
+  receiveMessage(event:any) {
+    this.message = event
+    console.log(this.message)
+  }
 }

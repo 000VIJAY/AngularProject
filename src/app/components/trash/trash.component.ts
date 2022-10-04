@@ -23,6 +23,10 @@ export class TrashComponent implements OnInit {
       this.noteArr.reverse();
     })
   }
+  receiveMessage(event:any) {
+    console.log(event) ;
+    this.getAllNotes();
+  }
   // OnSubmit(note:any) :void{
   //   console.log(note)
   //   this.note.trashNote(note.noteId).subscribe((result:any)=>console.log(result))
