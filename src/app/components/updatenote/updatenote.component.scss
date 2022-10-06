@@ -7,15 +7,15 @@
     height: 30px;
     font-size: large;
     background-color: transparent;
-    width: 100%;
-    margin: 0px;
+     width: 98%;
+    margin : 8.5px 0px;
     cursor: pointer;
     border: 0px;
 }
 
 .mySearch {
     height: 30px;
-    width: 100%;
+    width: 98%;
     letter-spacing: .01428571em;
     font-family: Roboto, Arial, sans-serif;
     font-size: .875rem;
@@ -26,6 +26,7 @@
     border-width: 1px 1px 1px 6px;
     min-height: 28px;
     cursor: pointer;
+    padding-bottom: 10px;
 }
 
 input:focus {
@@ -52,11 +53,17 @@ input:focus {
 
     :hover {
         border-radius: 8px;
-        background-color: #f1f3f4;
+        background-color: #fff;
+        opacity: 0.5;
     }
 }
 .nDiv {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+}
+.ourDiv{
+    height: 140px;
+    margin-left: 12px;
 }

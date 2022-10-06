@@ -14,7 +14,7 @@
 .aDiv{
     display: flex;
     flex-direction: column;
-    padding: 15px 0px;
+    padding: 15px 10px;
 }
 .mySearch {
     height: 30px;
@@ -36,7 +36,7 @@
     font-size: 18px;
     font-weight: 500;
     height: 25px;
-    padding: 0 0 10px 0;
+    padding:10px;
 }
 .serDiv{
     width: 100%;
@@ -90,4 +90,22 @@
     :hover{
         background-color:#f2f5f9;
     }
+}
+.iDiv{
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 40%;
+    
+}
+.divImg{
+    height: 20px;
+    width: 20px;
+    margin: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.resDiv{
+    height: auto;
+    width: 170px;
+    padding-right: 50px;
 }

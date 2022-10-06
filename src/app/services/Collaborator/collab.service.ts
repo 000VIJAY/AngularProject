@@ -30,4 +30,14 @@ export class CollabService {
     }
     return this.http.getService(`https://localhost:44300/Collaborator/GetCollaboratorByNoteId/${data}`, true, header)
   }
+  DeleteCollaborator(dat: any){
+    console.log(dat,this.token);
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer "+this.token 
+      })
+    }
+    return this.http.DeleteService(`https://localhost:44300/Collaborator/RemoveCollaborator/${dat.NoteId}/${dat.CollabId}`, true, header)
+  }
 }

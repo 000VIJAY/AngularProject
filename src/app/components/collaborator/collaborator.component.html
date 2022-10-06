@@ -14,9 +14,17 @@
                 </span><br>
                 <span>{{this.data.user.email}}</span>
             </div>
-            <!-- <div *ngFor="let result of res">
-                <span>{{this.result.collabEmailId}}</span>
-            </div> -->
+        </div>
+        <div class="xDiv" *ngFor="let result of res">
+            <div class="yDiv">
+                <img class="imDiv" src="../../../assets/account_circle_FILL0_wght300_GRAD0_opsz48.svg">
+            </div>
+            <div class="resDiv">
+                {{this.result.collabEmailId}}
+            </div>
+            <div class="iDiv">
+                <img (click)="DeleteCollab()" class="divImg" src="../../../assets/close_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="Delete">
+            </div>
         </div>
         <div class="xDiv">
             <div class="yDiv">
@@ -28,8 +36,8 @@
         </div>
     </div>
     <div class="ic">
-        <div class="close" routerLink=".">
-            <button>Cancel</button>
+        <div class="close">
+            <button (click)="onclick()">Cancel</button>
         </div>
         <div class="close">
             <button (click)="onNoClick()">Save</button>

@@ -17,6 +17,7 @@ export class IconComponent implements OnInit {
   nam: any = 'TrashComponent';
   archive: any = 'ArchiveComponent';
   Get: any = 'GetAllNotesComponent';
+  nul:any='null'
   durationInSeconds = 5;
   @Input() childMessage: any;
   @Output() messageEvent = new EventEmitter<any>();
@@ -25,7 +26,16 @@ export class IconComponent implements OnInit {
 
   ngOnInit(): void {
     this.name = this.route.snapshot.component
-    console.log(this.name.name)
+    console.log(this.name)
+  }
+  myfunc(){
+    if(this.name==null)
+    {
+      return this.name == null
+    }
+    else{
+      return this.name
+    }
   }
   Archive(): void {
     console.log(this.childMessage)
@@ -63,11 +73,11 @@ export class IconComponent implements OnInit {
     })
   }
   openSnackBar() {
-    let snakbarRef=this._snackBar.open("Message archived!!");
+    let snakbarRef=this._snackBar.open("Note archived!!");
     snakbarRef._dismissAfter(1000);
   }
   opeSnackBar() {
-    let snakbarRef=this._snackBar.open("Message Unarchived!!");
+    let snakbarRef=this._snackBar.open("Note Unarchived!!");
     snakbarRef._dismissAfter(1000);
   }
   opSnackBar(){
@@ -89,7 +99,7 @@ export class IconComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(CollaboratorComponent, {
       width: '600px',
-      // panelClass: 'dialog-container-custom',
+      panelClass: 'dialog-container-custom',
       data:this.childMessage
     });
 

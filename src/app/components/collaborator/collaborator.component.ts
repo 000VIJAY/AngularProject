@@ -31,7 +31,20 @@ export class CollaboratorComponent implements OnInit {
   }
   getCollabo(){
     this.not.GetCollab(this.data.noteId).subscribe((res:any)=> {console.log(res.allCollab);
-      this.res == res.allCollab;
+      this.res = res.allCollab;
+      console.log(this.res.collabId)
     })
+  }
+  DeleteCollab(){
+    let dat={
+      collabId:this.res.collabId,
+      NoteId:this.data.noteId
+    }
+    this.not.DeleteCollaborator(dat).subscribe((result:any)=>{
+      console.log(result)
+    })
+  }
+  onclick(){
+    this.dialogRef.close();
   }
 }

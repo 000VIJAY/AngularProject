@@ -19,6 +19,7 @@ description:any;
     console.log(this.data)
      this.title=this.data.title;
      this.description=this.data.description;
+     console.log(this.message)
   }
   onNoClick(): void {
     this.dialogRef.close();

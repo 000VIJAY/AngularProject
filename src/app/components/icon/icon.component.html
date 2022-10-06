@@ -1,14 +1,14 @@
 <div class="OuterDiv">
     <div role="button" class="add" matTooltip="Remind me">
-        <img *ngIf="name.name!=nam" class="divImg"
+        <img *ngIf="myfunc() == nul ||myfunc().name!=nam " class="divImg"
             src="../../../assets/notifications_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" matTooltip="collaborator" (click)="openDialog()">
-        <img *ngIf="name.name!=nam" class="divImg"
+        <img *ngIf="myfunc() == nul ||myfunc().name!=nam " class="divImg"
             src="../../../assets/person_add_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" matTooltip="background color" mat-button [matMenuTriggerFor]="belowMenu">
-        <img *ngIf="name.name!=nam" class="divImg"
+        <img *ngIf="myfunc() == nul ||myfunc().name!=nam " class="divImg"
             src="../../../assets/palette_FILL0_wght300_GRAD0_opsz48.svg">
         <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
             <div class="back">
@@ -19,16 +19,16 @@
         </mat-menu>
     </div>
     <div role="button" class="add" matTooltip="image">
-        <img *ngIf="name.name!=nam" class="divImg"
+        <img *ngIf="myfunc() == nul ||myfunc().name!=nam " class="divImg"
             src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
     <div role="button" class="add" (click)="Archive()" >
-        <img *ngIf="name.name!=archive && name.name!=nam" matTooltip="Archive" class="divImg" (click)="openSnackBar()"
+        <img *ngIf=" myfunc().name!=archive && myfunc().name !=nam || myfunc() == nul" matTooltip="Archive" class="divImg" (click)="openSnackBar()"
             src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
-        <img *ngIf="name.name==archive" class="divImg" matTooltip="Unarchive"(click)="opeSnackBar()"
+        <img *ngIf="myfunc().name==archive" class="divImg" matTooltip="Unarchive"(click)="opeSnackBar()"
             src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
     </div>
-    <div class="OuterDiv" *ngIf="name.name==nam">
+    <div class="OuterDiv" *ngIf="myfunc() == nul || name.name==nam">
         <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()" (click)="oeSnackBar()">
             <img class="divImg" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
@@ -36,7 +36,7 @@
             <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg">
         </div>
     </div>
-    <div *ngIf="name.name!=nam" role="button" class="add">
+    <div *ngIf="myfunc().name == nul ||myfunc().name!=nam " role="button" class="add">
         <img class="divImg" src="../../../assets/more_vert_FILL0_wght300_GRAD0_opsz48.svg" matTooltip="More"
             mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-menu #menu="matMenu">

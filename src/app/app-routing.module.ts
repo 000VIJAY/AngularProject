@@ -10,6 +10,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { RemindersComponent } from './components/reminders/reminders.component';
 import { ResetPasswordComponent } from './components/reset-password/reset-password.component';
 import { TrashComponent } from './components/trash/trash.component';
+import { UpdatenoteComponent } from './components/updatenote/updatenote.component';
 
 const routes: Routes = [
   {path:'signup', component:RegisterComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
     {path:'Notes',component:GetAllNotesComponent},
     {path:'Archive',component:ArchiveComponent},
     {path:'Trash',component:TrashComponent},
-    {path:'Reminders',component:RemindersComponent}
+    {path:'Reminders',component:RemindersComponent},
+    {path:'update',component:UpdatenoteComponent}
 ]},
   { path: '', redirectTo: "/signin", pathMatch: 'full' }, 
 ];
