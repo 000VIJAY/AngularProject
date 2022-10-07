@@ -35,10 +35,11 @@ export class CollaboratorComponent implements OnInit {
       console.log(this.res.collabId)
     })
   }
-  DeleteCollab(){
+  DeleteCollab(result:any){
+    console.log(result)
     let dat={
-      collabId:this.res.collabId,
-      NoteId:this.data.noteId
+      collabId:result.collabId,
+      NoteId:result.note.noteId
     }
     this.not.DeleteCollaborator(dat).subscribe((result:any)=>{
       console.log(result)

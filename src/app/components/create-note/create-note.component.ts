@@ -11,10 +11,12 @@ export class CreateNoteComponent implements OnInit {
   title: any;
   description: any;
   message:any;
+  color:any;
   @Output() messageEvent = new EventEmitter<any>();
   constructor(private note: NoteService) { }
 
   ngOnInit(): void {
+    console.log(this.color)
   }
   show() {
     this.isShow = true;
@@ -31,6 +33,14 @@ export class CreateNoteComponent implements OnInit {
       console.log(result);
       this.messageEvent.emit(result);
     })
+  }
+  colorcha(){
+    if(this.color==this.message.color)
+    {
+      return this.color == this.message.color
+    }else{
+      return this.color =="white"
+    }
   }
   receiveMessage(event:any) {
     this.message = event

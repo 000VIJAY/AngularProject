@@ -38,6 +38,6 @@ export class CollabService {
         'Authorization': "Bearer "+this.token 
       })
     }
-    return this.http.DeleteService(`https://localhost:44300/Collaborator/RemoveCollaborator/${dat.NoteId}/${dat.CollabId}`, true, header)
+    return this.http.DeleteService(`https://localhost:44300/Collaborator/RemoveCollaborator/${dat.NoteId}/${dat.collabId}`, true, header)
   }
 }

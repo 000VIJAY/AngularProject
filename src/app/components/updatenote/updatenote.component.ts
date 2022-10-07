@@ -26,7 +26,7 @@ description:any;
     let dat={
       title:this.title,
       description:this.description,
-      color:'white',
+      color:this.data.color,
       isPin: false,
       isReminder: false,
       isArchieve: false,

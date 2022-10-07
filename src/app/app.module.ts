@@ -33,6 +33,7 @@ import { RemindersComponent } from './components/reminders/reminders.component';
 import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
 import { CollaboratorComponent } from './components/collaborator/collaborator.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FlexLayoutModule } from "@angular/flex-layout";
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +60,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     MatInputModule,
     MatButtonModule,
     ReactiveFormsModule,HttpClientModule,MatListModule,MatIconModule,MatSidenavModule,MatToolbarModule,FormsModule,
-    MatDialogModule,MatTooltipModule,MatMenuModule,MatSnackBarModule
+    MatDialogModule,MatTooltipModule,MatMenuModule,MatSnackBarModule,FlexLayoutModule
   ],
   providers: [AuthGaurdService],
   bootstrap: [AppComponent]
