@@ -11,7 +11,7 @@ import { NoteService } from 'src/app/services/noteService/note.service';
 export class UpdatenoteComponent implements OnInit {
 title:any;
 description:any;
-
+colour:any;
   constructor(public dialogRef: MatDialogRef<UpdatenoteComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any, private not:NoteService) { }
 
@@ -19,14 +19,25 @@ description:any;
     console.log(this.data)
      this.title=this.data.title;
      this.description=this.data.description;
+     console.log(this.data.color)
      console.log(this.message)
   }
+  colorcha(){
+    console.log(this.message)
+    if(this.message==undefined)
+    {
+    this.colour =this.data.color
+    }else{
+     this.colour = this.message
+    }
+  }
   onNoClick(): void {
+    this.colorcha()
     this.dialogRef.close();
     let dat={
       title:this.title,
       description:this.description,
-      color:this.data.color,
+      color:this.colour,
       isPin: false,
       isReminder: false,
       isArchieve: false,
@@ -38,6 +49,7 @@ description:any;
   }
   message:any;
   receiveMessage(event:any) {
+    console.log(event.color)
     this.message = event
     console.log(this.message)
   }

@@ -10,7 +10,7 @@
         <div>
             <div class="ic">
                 <div>
-                    <app-icon [childMessage]="data" (messageEvent)="receiveMessage($event)"></app-icon>
+                    <app-icon [childMessage]="data" (messageEvent)="receiveMessage($event)"  (colorEvent)="receiveMessage($event)"></app-icon>
                 </div>
                 <div class="close">
                     <button (click)="onNoClick()">Close</button>

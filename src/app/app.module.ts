@@ -34,6 +34,7 @@ import { AuthGaurdService } from './services/AuthService/auth-gaurd.service';
 import { CollaboratorComponent } from './components/collaborator/collaborator.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DemoComponentComponent } from './components/demo-component/demo-component.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,6 +52,7 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     UpdatenoteComponent,
     RemindersComponent,
     CollaboratorComponent,
+    DemoComponentComponent,
   ],
   imports: [
     BrowserModule,

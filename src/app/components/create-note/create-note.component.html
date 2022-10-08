@@ -12,7 +12,7 @@
         <div *ngIf="isShow">
             <div class="ic">
                 <div>
-                    <app-icon (messageEvent)="receiveMessage($event)" ></app-icon>
+                    <app-icon (colorEvent)="receiveMessage($event)" ></app-icon>
                 </div>
                 <div class="close">
                     <button (click)="close()">Close</button>

@@ -11,40 +11,42 @@ export class CreateNoteComponent implements OnInit {
   title: any;
   description: any;
   message:any;
-  color:any;
+  colour:any;
   @Output() messageEvent = new EventEmitter<any>();
   constructor(private note: NoteService) { }
 
   ngOnInit(): void {
-    console.log(this.color)
+    console.log(this.colour)
   }
   show() {
     this.isShow = true;
   }
+  colorcha(){
+    console.log(this.message)
+    if(this.message==undefined)
+    {
+    this.colour ="white"
+    }else{
+     this.colour = this.message
+    }
+  }
   close() {
+    this.colorcha()
     this.isShow = false;
     console.log(this.title, this.description)
     let data = {
       title: this.title,
       description: this.description,
-      color: "white"
+      color: this.colour
     }
     this.note.AddNotes(data).subscribe((result: any) => {
       console.log(result);
       this.messageEvent.emit(result);
     })
   }
-  colorcha(){
-    if(this.color==this.message.color)
-    {
-      return this.color == this.message.color
-    }else{
-      return this.color =="white"
-    }
-  }
   receiveMessage(event:any) {
     this.message = event
     console.log(this.message)
-    this.messageEvent.emit(this.message)
+    // this.messageEvent.emit(this.message)
   }
 }

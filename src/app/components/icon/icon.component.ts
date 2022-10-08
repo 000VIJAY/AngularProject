@@ -18,9 +18,11 @@ export class IconComponent implements OnInit {
   archive: any = 'ArchiveComponent';
   Get: any = 'GetAllNotesComponent';
   nul:any='null'
+  app:any='AppComponent'
   durationInSeconds = 5;
   @Input() childMessage: any;
   @Output() messageEvent = new EventEmitter<any>();
+  @Output() colorEvent = new EventEmitter<any>();
   constructor(private not: NoteService, private route: ActivatedRoute,private dialog: MatDialog,private _snackBar: MatSnackBar) {
   }
 
@@ -62,15 +64,21 @@ export class IconComponent implements OnInit {
   { "name": "LightBlue" }, { "name": "Orange" }, { "name": "Black" },
   { "name": "Green" }, { "name": "Pink" }, { "name": "Purple" }, { "name": "Maroon" }, { "name": "Yellow" }]
   changeColor(name:any){
-    console.log(name)
-    let data ={
-      color: name,
-      NoteId: this.childMessage.noteId
+    console.log(this.childMessage,name)
+    if(this.childMessage==undefined || this.childMessage==null)
+    {
+      this.colorEvent.emit(name)
     }
-    this.not.BackgroundColor(data).subscribe((res:any)=>{
-      console.log(res);
-      this.messageEvent.emit(res)
-    })
+    else{
+      let data ={
+        color: name,
+        NoteId: this.childMessage.noteId
+      }
+      this.not.BackgroundColor(data).subscribe((res:any)=>{
+        console.log(res);
+        this.messageEvent.emit(res)
+      })
+    }
   }
   openSnackBar() {
     let snakbarRef=this._snackBar.open("Note archived!!");

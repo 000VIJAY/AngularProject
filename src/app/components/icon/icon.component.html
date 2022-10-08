@@ -13,7 +13,8 @@
         <mat-menu style="padding: 0px; margin:0px;" #belowMenu="matMenu" yPosition="below">
             <div class="back">
                 <div class="new" *ngFor="let col of color">
-                    <button (click)="changeColor(col.name)"[style.Background]="col.name" [matTooltip]="col.name"  (click)="opSnackBar()"></button>
+                    <button (click)="changeColor(col.name)" [style.Background]="col.name" [matTooltip]="col.name"
+                        (click)="opSnackBar()"></button>
                 </div>
             </div>
         </mat-menu>
@@ -22,11 +23,13 @@
         <img *ngIf="myfunc() == nul ||myfunc().name!=nam " class="divImg"
             src="../../../assets/image_FILL0_wght300_GRAD0_opsz48.svg">
     </div>
-    <div role="button" class="add" (click)="Archive()" >
-        <img *ngIf=" myfunc().name!=archive && myfunc().name !=nam || myfunc() == nul" matTooltip="Archive" class="divImg" (click)="openSnackBar()"
-            src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
-        <img *ngIf="myfunc().name==archive" class="divImg" matTooltip="Unarchive"(click)="opeSnackBar()"
+    <div role="button" class="add" (click)="Archive()">
+        <img *ngIf=" myfunc().name!=archive && myfunc().name !=nam || myfunc() == nul" matTooltip="Archive"
+            class="divImg" (click)="openSnackBar()" src="../../../assets/archive_FILL0_wght300_GRAD0_opsz48.svg">
+        <img *ngIf="myfunc().name==archive" class="divImg" matTooltip="Unarchive" (click)="opeSnackBar()"
             src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg">
+        <!-- <img *ngIf=" myfunc().name!=archive && myfunc().name==app" class="divImg" matTooltip="Unarchive"
+            (click)="opeSnackBar()" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48.svg"> -->
     </div>
     <div class="OuterDiv" *ngIf="myfunc() == nul || name.name==nam">
         <div role="button" class="add" matTooltip="Delete forever" (click)="OnDeleteForever()" (click)="oeSnackBar()">
@@ -41,7 +44,7 @@
             mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="OnDelete()" (click)="SnackBar()">
-                <span style="font-size:large;" >Delete Note</span>
+                <span style="font-size:large;">Delete Note</span>
             </button>
             <button mat-menu-item>
                 <span style="font-size:large;">Add Label</span>
