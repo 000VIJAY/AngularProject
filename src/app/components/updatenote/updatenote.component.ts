@@ -21,6 +21,7 @@ colour:any;
      this.description=this.data.description;
      console.log(this.data.color)
      console.log(this.message)
+     this.colorcha()
   }
   colorcha(){
     console.log(this.message)
